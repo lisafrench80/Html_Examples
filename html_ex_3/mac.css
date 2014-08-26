@@ -1,0 +1,10 @@
+.slideshow {width:980px; text-align:center; margin:auto; height:439px; position:relative; background:#fff;}
+#felineHTCSlider, #felineHTCSlider li {height: 439px; width: 980px;}
+#felineHTCSlider {list-style: none; float: left; margin: 0; padding: 0; overflow: hidden; position: relative;}
+#felineHTCSlider li {display: none; float: left; margin: 0; position: absolute; width: 100%;}
+#felineHTCSlider li.current {display: block; z-index: 2;}
+#felineHTCSlider li.next {display: block; z-index: 1;}
+#felineHTCSlider li ul li {display: block; position: relative;}
+.container {text-align:center; position: relative; width: 100%; z-index: 15;}
+.slider1contents {position:absolute; width:450px; z-index:100; top:150px; left:0px; text-align:left; background:#efeada; padding-top:20px; padding-left:25px; padding-bottom:10px;}
+.slider1contents p {color:#652d89; font-size:32px; font-family:'Open Sans', sans-serif; line-height:100%; font-weight:700; text-align:left;}
