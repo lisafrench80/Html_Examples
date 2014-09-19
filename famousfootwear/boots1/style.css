@@ -1,0 +1,1924 @@
+@import 'fonts.css';
+@import 'fonts/dinengschriftstd.css';
+/* ================= 1. CSS Reset ================= */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+input, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	border: 0;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+
+html {
+	font-size: 100%; /* 16px browser default */
+}
+
+body {
+	background-color: #eee;
+	line-height: 1;
+	margin: 0;
+	padding: 0;
+}
+
+body,
+input,
+select,
+textarea {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+a,
+a:visited,
+button,
+input[type="button"],
+input[type="submit"],
+.btn {
+	-moz-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+
+::-moz-selection {
+	background-color: #1e1e1e;
+	color: #fff;
+}
+
+::selection {
+	background-color: #1e1e1e;
+	color: #fff;
+}
+
+a img {
+	border: none;
+}
+
+/* ================= 2. General Stuff ================= */
+a:hover,
+body,
+h2 a,
+h2 a:visited,
+h4.widgettitle a,
+input,
+#title a,
+#title a:hover {
+	color: #1e1e1e;
+}
+
+a,
+h2 a:hover {
+	color: #ff2a00;
+}
+
+blockquote::before,
+blockquote p,
+input,
+select,
+textarea {
+	color: #999;
+}
+
+button,
+input[type="button"],
+input[type="submit"] {
+	color: #fff;
+}
+body {
+	background:#d7d2cb;
+}
+/* ================= 3. Fonts and Stuff ================= */
+body,
+input,
+textarea {
+	font-family: "Archer", serif;
+}
+body:after{
+    display:none;
+    content: url(images/ruggedout1.png) url(images/ruggedover1.png) url(images/waterproofout1.png) url(images/waterproofover1.png) url(images/solidout1.png) url(images/solidover2.png) url(images/unstoppableout1.png) url(images/unstoppableover1.png);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+	font-family: "Archer", serif;
+}
+
+.title {
+	font-family: "DIN1451StdEngschriftCondensed";
+	font-weight: 400;
+	line-height: 1.1;
+	font-size:400px;
+	color:#f58b02;
+	padding:0;
+}
+
+.home h4.title {
+	text-transform: uppercase;
+}
+
+h1 {
+	font-size: 42px;
+	font-size: 2.625rem;
+}
+
+blockquote::before {
+	font-size: 32px;
+	font-size: 2rem;
+}
+
+h2 {
+	font-family: "DINNextLTProRegular";
+	font-weight:normal;
+	font-size: 50px;
+	color:#6b6969;
+	padding-top:5px;
+	padding-bottom:5px;
+	margin:0;
+	margin-left:10%;
+	text-align:left;
+	width:65%;
+}
+
+h3 {
+	font-size: 24px;
+	font-size: 1.5rem;
+}
+
+h4 {
+	font-size: 20px;
+	font-size: 1.25rem;
+}
+
+h5 {
+	font-size: 18px;
+	font-size: 1.125rem;
+}
+
+h6{
+	font-size: 16px;
+	font-size: 1rem;
+}
+
+input,
+select,
+textarea,
+#footer p {
+	font-size: 14px;
+	font-size: 0.875rem;
+}
+blockquote p {
+	font-style: italic;
+}
+
+cite {
+	font-style: normal;
+}
+
+button,
+input[type="button"],
+input[type="submit"],
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+#title {
+	font-weight: 700;
+	-moz-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+
+a,
+a:hover,
+h2 a,
+h2 a:visited,
+#title a {
+	text-decoration: none;
+}
+input[type=text]{
+margin-bottom:20px;
+width:100%;
+padding:10px;
+border-radius:5px;
+border:1px solid #ccc;
+font-style:none;
+font-family:arial, sans-serif;
+margin-top:25px;
+}
+input[type=submit]{
+margin-bottom:20px;
+width:100%;
+padding:15px;
+border-radius:5px;
+border:1px solid #7ac9b7;
+background-color:#a4e6db;
+
+}
+/* ================= 4. General Layout ================= */
+#header {
+	min-height: 46px;
+	overflow: hidden;
+	padding-bottom: 16px;
+	padding-bottom: 1px;
+	overflow: hidden;
+	background: rgb(233,27,27); /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2U5MWIxYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjIyJSIgc3RvcC1jb2xvcj0iI2RiMWExYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjI4JSIgc3RvcC1jb2xvcj0iI2NmMWIxYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjU3JSIgc3RvcC1jb2xvcj0iI2FiMTkxOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNhYjE5MTkiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top,  rgba(233,27,27,1) 0%, rgba(219,26,27,1) 22%, rgba(207,27,28,1) 28%, rgba(171,25,25,1) 57%, rgba(171,25,25,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(233,27,27,1)), color-stop(22%,rgba(219,26,27,1)), color-stop(28%,rgba(207,27,28,1)), color-stop(57%,rgba(171,25,25,1)), color-stop(100%,rgba(171,25,25,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(233,27,27,1) 0%,rgba(219,26,27,1) 22%,rgba(207,27,28,1) 28%,rgba(171,25,25,1) 57%,rgba(171,25,25,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(233,27,27,1) 0%,rgba(219,26,27,1) 22%,rgba(207,27,28,1) 28%,rgba(171,25,25,1) 57%,rgba(171,25,25,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(233,27,27,1) 0%,rgba(219,26,27,1) 22%,rgba(207,27,28,1) 28%,rgba(171,25,25,1) 57%,rgba(171,25,25,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(233,27,27,1) 0%,rgba(219,26,27,1) 22%,rgba(207,27,28,1) 28%,rgba(171,25,25,1) 57%,rgba(171,25,25,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e91b1b', endColorstr='#ab1919',GradientType=0 ); /* IE6-8 */
+	position:fixed;
+	width:100%;
+	z-index:9999;
+}
+.headerWrapper {
+	width:90%;
+	text-align:center;
+	margin:auto;
+}
+.headerLogo {
+	text-align:left;
+}
+
+.wrap {
+	margin: 0 auto;
+	text-align:center;
+	width: 90%;
+	overflow:hidden;
+	padding:0;
+	max-height:2220px;
+}
+.slideOne {
+	background-image: url(images/slide1.png);
+	padding-top: 10%;  /* slope */
+	max-height:1097px;  /* start height */
+	background-size: cover;
+	-moz-background-size: cover;  /* Firefox 3.6 */
+	background-position: center;  /* Internet Explorer 7/8 */
+	position:relative;
+	padding-bottom:500px;
+	z-index:1;
+}
+.slideTwo {
+	background:transparent url(images/ruggedout1.png) no-repeat;
+	max-height:407px;
+	-ms-transform: rotate(-18deg); /* IE 9 */
+    -webkit-transform: rotate(-18deg); /* Chrome, Safari, Opera */
+    transform: rotate(-18deg);
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	position:relative;
+	top:-280px;
+	left:-11%;
+	z-index:1;
+	width:100%;
+	height:407px;
+	padding-right:20%;
+
+} 
+.slideTwo:hover {
+	background:transparent url(images/ruggedover1.png) no-repeat;
+	max-height:407px;
+	height:407px;
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	padding-right:20%;
+	cursor:pointer;
+}
+.slideThree {
+	background:transparent url(images/waterproofout1.png) no-repeat;
+	max-height:407px;
+	-ms-transform: rotate(-18deg); /* IE 9 */
+    -webkit-transform: rotate(-18deg); /* Chrome, Safari, Opera */
+    transform: rotate(-18deg);
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	position:relative;
+	top:-320px;
+	left:-11%;
+	z-index:1;
+	width:100%;
+	height:407px;
+	padding-right:20%;
+}
+.slideThree:hover {
+	background:transparent url(images/waterproofover1.png) no-repeat;
+	max-height:407px;
+	height:407px;
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	padding-right:20%;
+	cursor:pointer;
+}
+.slideFour {
+	background:transparent url(images/solidout1.png) no-repeat;
+	max-height:407px;
+	-ms-transform: rotate(-18deg); /* IE 9 */
+    -webkit-transform: rotate(-18deg); /* Chrome, Safari, Opera */
+    transform: rotate(-18deg);
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	position:relative;
+	top:-350px;
+	left:-11%;
+	z-index:1;
+	width:100%;
+	height:407px;
+	padding-right:20%;
+}
+.slideFour:hover {
+	background:transparent url(images/solidover2.png) no-repeat;
+	max-height:407px;
+	height:407px;
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	padding-right:20%;
+	cursor:pointer;
+}
+.slideFive {
+	background:transparent url(images/unstoppableout1.png) no-repeat;
+	max-height:407px;
+	-ms-transform: rotate(-18deg); /* IE 9 */
+    -webkit-transform: rotate(-18deg); /* Chrome, Safari, Opera */
+    transform: rotate(-18deg);
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	position:relative;
+	top:-380px;
+	left:-11%;
+	z-index:1;
+	width:100%;
+	height:407px;
+	padding-right:20%;
+}
+.slideFive:hover {
+	background:transparent url(images/unstoppableover1.png) no-repeat;
+	max-height:407px;
+	height:407px;
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	padding-right:20%;
+	cursor:pointer;
+}
+/* ================= Mobile/Tablet/Responsive ================= */
+
+@media only screen and (min-width: 1720px) {
+.wrap {
+	margin: 0 auto;
+	text-align:center;
+	width: 90%;
+	padding:0;
+	max-height:2300px;
+	overflow:visible;
+}
+.slideOne {
+	background-image: url(images/slide1.png);
+	padding-top: 10%;  /* slope */
+	max-height:1097px;  /* start height */
+	background-size: cover;
+	-moz-background-size: cover;  /* Firefox 3.6 */
+	background-position: center;  /* Internet Explorer 7/8 */
+	position:relative;
+	padding-bottom:600px;
+	z-index:1;
+}
+
+.slideTwo {
+	background:transparent url(images/ruggedout1.png) no-repeat;
+	max-height:457px;
+	-ms-transform: rotate(-19deg); /* IE 9 */
+    -webkit-transform: rotate(-19deg); /* Chrome, Safari, Opera */
+    transform: rotate(-19deg);
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	position:relative;
+	top:-100px;
+	left:-11%;
+	z-index:1;
+	width:100%;
+	height:457px;
+	padding-right:20%;
+	margin-top:-150px;
+
+} 
+.slideTwo:hover {
+	background:transparent url(images/ruggedover1.png) no-repeat;
+	max-height:457px;
+	height:457px;
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	padding-right:20%;
+	cursor:pointer;
+}
+.slideThree {
+	background:transparent url(images/waterproofout1.png) no-repeat;
+	max-height:457px;
+	-ms-transform: rotate(-19deg); /* IE 9 */
+    -webkit-transform: rotate(-19deg); /* Chrome, Safari, Opera */
+    transform: rotate(-19deg);
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	position:relative;
+	top:-50px;
+	left:-11%;
+	z-index:2;
+	width:100%;
+	height:457px;
+	padding-right:20%;
+	padding-top:0 !important;
+}
+.slideThree:hover {
+	background:transparent url(images/waterproofover1.png) no-repeat;
+	max-height:457px;
+	height:457px;
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	padding-right:20%;
+	cursor:pointer;
+}
+.slideFour {
+	background:transparent url(images/solidout1.png) no-repeat;
+	max-height:457px;
+	-ms-transform: rotate(-19deg); /* IE 9 */
+    -webkit-transform: rotate(-19deg); /* Chrome, Safari, Opera */
+    transform: rotate(-19deg);
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	position:relative;
+	top:0;
+	left:-11%;
+	z-index:1;
+	width:100%;
+	height:457px;
+	padding-right:20%;
+}
+.slideFour:hover {
+	background:transparent url(images/solidover2.png) no-repeat;
+	max-height:457px;
+	height:457px;
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	padding-right:20%;
+	cursor:pointer;
+}
+.slideFive {
+	background:transparent url(images/unstoppableout1.png) no-repeat;
+	max-height:457px;
+	-ms-transform: rotate(-19deg); /* IE 9 */
+    -webkit-transform: rotate(-19deg); /* Chrome, Safari, Opera */
+    transform: rotate(-19deg);
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	position:relative;
+	top:55px;
+	left:-11%;
+	z-index:1;
+	width:100%;
+	height:457px;
+	padding-right:20%;
+}
+.slideFive:hover {
+	background:transparent url(images/unstoppableover1.png) no-repeat;
+	max-height:457px;
+	height:457px;
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	padding-right:20%;
+	cursor:pointer;
+}
+}
+@media only screen and (max-width: 1280px) {
+.wrap {
+	margin: 0 auto;
+	text-align:center;
+	width:100%;
+	margin-bottom:-500px;
+	max-height:2750px;
+	overflow:hidden;
+}
+.title {
+	font-family: "DIN1451StdEngschriftCondensed";
+	font-weight: 400;
+	line-height: 1.1;
+	font-size:300px;
+	color:#f58b02;
+	padding:0;
+}
+
+h2 {
+	font-family: "DINNextLTProRegular";
+	font-weight:normal;
+	font-size: 40px;
+	color:#6b6969;
+	padding-top:5px;
+	padding-bottom:5px;
+	margin:0 auto;
+	text-align:left;
+	margin-left:10%;
+}
+.slideTwo {
+	background:transparent url(images/ruggedout1.png) no-repeat;
+	max-height:407px;
+	-ms-transform: rotate(-19deg); /* IE 9 */
+    -webkit-transform: rotate(-19deg); /* Chrome, Safari, Opera */
+    transform: rotate(-19deg);
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	position:relative;
+	top:-50px;
+	left:-11%;
+	z-index:1;
+	width:100%;
+	height:407px;
+	padding-right:20%;
+	margin-top:-150px;
+
+} 
+.slideTwo:hover {
+	background:transparent url(images/ruggedover1.png) no-repeat;
+	max-height:407px;
+	height:407px;
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	padding-right:20%;
+	cursor:pointer;
+}
+.slideThree {
+	background:transparent url(images/waterproofout1.png) no-repeat;
+	max-height:407px;
+	-ms-transform: rotate(-19deg); /* IE 9 */
+    -webkit-transform: rotate(-19deg); /* Chrome, Safari, Opera */
+    transform: rotate(-19deg);
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	position:relative;
+	top:-40px;
+	left:-11%;
+	z-index:2;
+	width:100%;
+	height:407px;
+	padding-right:20%;
+	padding-top:0 !important;
+}
+.slideThree:hover {
+	background:transparent url(images/waterproofover1.png) no-repeat;
+	max-height:407px;
+	height:407px;
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	padding-right:20%;
+	cursor:pointer;
+}
+.slideFour {
+	background:transparent url(images/solidout1.png) no-repeat;
+	max-height:407px;
+	-ms-transform: rotate(-19deg); /* IE 9 */
+    -webkit-transform: rotate(-19deg); /* Chrome, Safari, Opera */
+    transform: rotate(-19deg);
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	position:relative;
+	top:0;
+	left:-11%;
+	z-index:1;
+	width:100%;
+	height:407px;
+	padding-right:20%;
+}
+.slideFour:hover {
+	background:transparent url(images/solidover2.png) no-repeat;
+	max-height:407px;
+	height:407px;
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	padding-right:20%;
+	cursor:pointer;
+}
+.slideFive {
+	background:transparent url(images/unstoppableout1.png) no-repeat;
+	max-height:407px;
+	-ms-transform: rotate(-19deg); /* IE 9 */
+    -webkit-transform: rotate(-19deg); /* Chrome, Safari, Opera */
+    transform: rotate(-19deg);
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	position:relative;
+	top:55px;
+	left:-11%;
+	z-index:1;
+	width:100%;
+	height:407px;
+	padding-right:20%;
+}
+.slideFive:hover {
+	background:transparent url(images/unstoppableover1.png) no-repeat;
+	max-height:407px;
+	height:407px;
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	padding-right:20%;
+	cursor:pointer;
+}
+}
+@media only screen and (max-width: 1024px) {
+.wrap {
+	margin: 0 auto;
+	text-align:center;
+	width:100%;
+	margin-bottom:-500px;
+	max-height:2150px;
+	overflow:hidden;
+}
+.title {
+	font-family: "DIN1451StdEngschriftCondensed";
+	font-weight: 400;
+	line-height: 1.1;
+	font-size:200px;
+	color:#f58b02;
+	padding:0;
+}
+
+h2 {
+	font-family: "DINNextLTProRegular";
+	font-weight:normal;
+	font-size: 30px;
+	color:#6b6969;
+	padding-top:5px;
+	padding-bottom:5px;
+	margin:0 auto;
+	text-align:center;
+}
+.slideTwo {
+	background:transparent url(images/ruggedout1.png) no-repeat;
+	max-height:407px;
+	-ms-transform: rotate(-19deg); /* IE 9 */
+    -webkit-transform: rotate(-19deg); /* Chrome, Safari, Opera */
+    transform: rotate(-19deg);
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	position:relative;
+	top:-50px;
+	left:-11%;
+	z-index:1;
+	width:100%;
+	height:407px;
+	padding-right:20%;
+	margin-top:-150px;
+
+} 
+.slideTwo:hover {
+	background:transparent url(images/ruggedover1.png) no-repeat;
+	max-height:407px;
+	height:407px;
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	padding-right:20%;
+	cursor:pointer;
+}
+.slideThree {
+	background:transparent url(images/waterproofout1.png) no-repeat;
+	max-height:407px;
+	-ms-transform: rotate(-19deg); /* IE 9 */
+    -webkit-transform: rotate(-19deg); /* Chrome, Safari, Opera */
+    transform: rotate(-19deg);
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	position:relative;
+	top:-110px;
+	left:-11%;
+	z-index:2;
+	width:100%;
+	height:407px;
+	padding-right:20%;
+	padding-top:0 !important;
+}
+.slideThree:hover {
+	background:transparent url(images/waterproofover1.png) no-repeat;
+	max-height:407px;
+	height:407px;
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	padding-right:20%;
+	cursor:pointer;
+}
+.slideFour {
+	background:transparent url(images/solidout1.png) no-repeat;
+	max-height:407px;
+	-ms-transform: rotate(-19deg); /* IE 9 */
+    -webkit-transform: rotate(-19deg); /* Chrome, Safari, Opera */
+    transform: rotate(-19deg);
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	position:relative;
+	top:-165px;
+	left:-11%;
+	z-index:1;
+	width:100%;
+	height:407px;
+	padding-right:20%;
+}
+.slideFour:hover {
+	background:transparent url(images/solidover2.png) no-repeat;
+	max-height:407px;
+	height:407px;
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	padding-right:20%;
+	cursor:pointer;
+}
+.slideFive {
+	background:transparent url(images/unstoppableout1.png) no-repeat;
+	max-height:407px;
+	-ms-transform: rotate(-19deg); /* IE 9 */
+    -webkit-transform: rotate(-19deg); /* Chrome, Safari, Opera */
+    transform: rotate(-19deg);
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	position:relative;
+	top:-220px;
+	left:-11%;
+	z-index:1;
+	width:100%;
+	height:407px;
+	padding-right:20%;
+}
+.slideFive:hover {
+	background:transparent url(images/unstoppableover1.png) no-repeat;
+	max-height:407px;
+	height:407px;
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	padding-right:20%;
+	cursor:pointer;
+}
+}
+@media only screen and (width: 900px) {
+.slideTwo {
+	background:transparent url(images/ruggedover1.png) no-repeat;
+	max-height:407px;
+	-ms-transform: rotate(-19deg); /* IE 9 */
+    -webkit-transform: rotate(-19deg); /* Chrome, Safari, Opera */
+    transform: rotate(-19deg);
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	position:relative;
+	top:-50px;
+	left:-11%;
+	z-index:1;
+	width:100%;
+	height:407px;
+	padding-right:20%;
+	margin-top:-150px;
+
+} 
+.slideTwo:hover {
+	background:transparent url(images/ruggedover1.png) no-repeat;
+	max-height:407px;
+	height:407px;
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	padding-right:20%;
+	cursor:pointer;
+}
+.slideThree {
+	background:transparent url(images/waterproofover1.png) no-repeat;
+	max-height:407px;
+	-ms-transform: rotate(-19deg); /* IE 9 */
+    -webkit-transform: rotate(-19deg); /* Chrome, Safari, Opera */
+    transform: rotate(-19deg);
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	position:relative;
+	top:-210px;
+	left:-11%;
+	z-index:2;
+	width:100%;
+	height:407px;
+	padding-right:20%;
+	padding-top:0 !important;
+}
+.slideThree:hover {
+	background:transparent url(images/waterproofover1.png) no-repeat;
+	max-height:407px;
+	height:407px;
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	padding-right:20%;
+	cursor:pointer;
+}
+.slideFour {
+	background:transparent url(images/solidover2.png) no-repeat;
+	max-height:407px;
+	-ms-transform: rotate(-19deg); /* IE 9 */
+    -webkit-transform: rotate(-19deg); /* Chrome, Safari, Opera */
+    transform: rotate(-19deg);
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	position:relative;
+	top:-365px;
+	left:-11%;
+	z-index:1;
+	width:100%;
+	height:407px;
+	padding-right:20%;
+}
+.slideFour:hover {
+	background:transparent url(images/solidover2.png) no-repeat;
+	max-height:407px;
+	height:407px;
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	padding-right:20%;
+	cursor:pointer;
+}
+.slideFive {
+	background:transparent url(images/unstoppableover1.png) no-repeat;
+	max-height:407px;
+	-ms-transform: rotate(-19deg); /* IE 9 */
+    -webkit-transform: rotate(-19deg); /* Chrome, Safari, Opera */
+    transform: rotate(-19deg);
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	position:relative;
+	top:-520px;
+	left:-11%;
+	z-index:1;
+	width:100%;
+	height:407px;
+	padding-right:20%;
+}
+.slideFive:hover {
+	background:transparent url(images/unstoppableover1.png) no-repeat;
+	max-height:407px;
+	height:407px;
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	padding-right:20%;
+	cursor:pointer;
+}
+}
+@media only screen and (max-width: 868px) {
+.wrap {
+	margin: 0 auto;
+	text-align:center;
+	width:100%;
+	margin-bottom:-500px;
+	max-height:1800px;
+	overflow:hidden;
+}
+.title {
+	font-family: "DIN1451StdEngschriftCondensed";
+	font-weight: 400;
+	line-height: 1.1;
+	font-size:150px;
+	color:#f58b02;
+	padding:0;
+}
+
+h2 {
+	font-family: "DINNextLTProRegular";
+	font-weight:normal;
+	font-size: 20px;
+	color:#6b6969;
+	padding-top:5px;
+	padding-bottom:5px;
+	margin:0 auto;
+	text-align:center;
+}
+.slideTwo {
+	background:transparent url(images/ruggedover1.png) no-repeat;
+	max-height:407px;
+	-ms-transform: rotate(-19deg); /* IE 9 */
+    -webkit-transform: rotate(-19deg); /* Chrome, Safari, Opera */
+    transform: rotate(-19deg);
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	position:relative;
+	top:-50px;
+	left:-11%;
+	z-index:1;
+	width:100%;
+	height:407px;
+	padding-right:20%;
+	margin-top:-150px;
+
+} 
+.slideTwo:hover {
+	background:transparent url(images/ruggedover1.png) no-repeat;
+	max-height:407px;
+	height:407px;
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	padding-right:20%;
+	cursor:pointer;
+}
+.slideThree {
+	background:transparent url(images/waterproofover1.png) no-repeat;
+	max-height:407px;
+	-ms-transform: rotate(-19deg); /* IE 9 */
+    -webkit-transform: rotate(-19deg); /* Chrome, Safari, Opera */
+    transform: rotate(-19deg);
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	position:relative;
+	top:-210px;
+	left:-11%;
+	z-index:2;
+	width:100%;
+	height:407px;
+	padding-right:20%;
+	padding-top:0 !important;
+}
+.slideThree:hover {
+	background:transparent url(images/waterproofover1.png) no-repeat;
+	max-height:407px;
+	height:407px;
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	padding-right:20%;
+	cursor:pointer;
+}
+.slideFour {
+	background:transparent url(images/solidover2.png) no-repeat;
+	max-height:407px;
+	-ms-transform: rotate(-19deg); /* IE 9 */
+    -webkit-transform: rotate(-19deg); /* Chrome, Safari, Opera */
+    transform: rotate(-19deg);
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	position:relative;
+	top:-365px;
+	left:-11%;
+	z-index:1;
+	width:100%;
+	height:407px;
+	padding-right:20%;
+}
+.slideFour:hover {
+	background:transparent url(images/solidover2.png) no-repeat;
+	max-height:407px;
+	height:407px;
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	padding-right:20%;
+	cursor:pointer;
+}
+.slideFive {
+	background:transparent url(images/unstoppableover1.png) no-repeat;
+	max-height:407px;
+	-ms-transform: rotate(-19deg); /* IE 9 */
+    -webkit-transform: rotate(-19deg); /* Chrome, Safari, Opera */
+    transform: rotate(-19deg);
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	position:relative;
+	top:-520px;
+	left:-11%;
+	z-index:1;
+	width:100%;
+	height:407px;
+	padding-right:20%;
+}
+.slideFive:hover {
+	background:transparent url(images/unstoppableover1.png) no-repeat;
+	max-height:407px;
+	height:407px;
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	padding-right:20%;
+	cursor:pointer;
+}
+}
+
+@media only screen and (max-width: 768px) {
+.wrap {
+	margin: 0 auto;
+	text-align:center;
+	width:100%;
+	margin-bottom:-500px;
+	max-height:1800px;
+	overflow:hidden;
+}
+.title {
+	font-family: "DIN1451StdEngschriftCondensed";
+	font-weight: 400;
+	line-height: 1.1;
+	font-size:150px;
+	color:#f58b02;
+	padding:0;
+}
+
+h2 {
+	font-family: "DINNextLTProRegular";
+	font-weight:normal;
+	font-size: 20px;
+	color:#6b6969;
+	padding-top:5px;
+	padding-bottom:5px;
+	margin:0 auto;
+	text-align:center;
+}
+.slideOne {
+	padding-top: 10%;  /* slope */
+	height:500px;
+	z-index:1;
+	padding-bottom:0;
+}
+.slideTwo {
+	background:transparent url(images/ruggedover1.png) no-repeat;
+	max-height:407px;
+	-ms-transform: rotate(-19deg); /* IE 9 */
+    -webkit-transform: rotate(-19deg); /* Chrome, Safari, Opera */
+    transform: rotate(-19deg);
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	position:relative;
+	top:-50px;
+	left:-11%;
+	z-index:1;
+	width:100%;
+	height:407px;
+	padding-right:20%;
+	margin-top:-150px;
+
+} 
+.slideTwo:hover {
+	background:transparent url(images/ruggedover1.png) no-repeat;
+	max-height:407px;
+	height:407px;
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	padding-right:20%;
+	cursor:pointer;
+}
+.slideThree {
+	background:transparent url(images/waterproofover1.png) no-repeat;
+	max-height:407px;
+	-ms-transform: rotate(-19deg); /* IE 9 */
+    -webkit-transform: rotate(-19deg); /* Chrome, Safari, Opera */
+    transform: rotate(-19deg);
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	position:relative;
+	top:-210px;
+	left:-11%;
+	z-index:2;
+	width:100%;
+	height:407px;
+	padding-right:20%;
+	padding-top:0 !important;
+}
+.slideThree:hover {
+	background:transparent url(images/waterproofover1.png) no-repeat;
+	max-height:407px;
+	height:407px;
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	padding-right:20%;
+	cursor:pointer;
+}
+.slideFour {
+	background:transparent url(images/solidover2.png) no-repeat;
+	max-height:407px;
+	-ms-transform: rotate(-19deg); /* IE 9 */
+    -webkit-transform: rotate(-19deg); /* Chrome, Safari, Opera */
+    transform: rotate(-19deg);
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	position:relative;
+	top:-365px;
+	left:-11%;
+	z-index:1;
+	width:100%;
+	height:407px;
+	padding-right:20%;
+}
+.slideFour:hover {
+	background:transparent url(images/solidover2.png) no-repeat;
+	max-height:407px;
+	height:407px;
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	padding-right:20%;
+	cursor:pointer;
+}
+.slideFive {
+	background:transparent url(images/unstoppableover1.png) no-repeat;
+	max-height:407px;
+	-ms-transform: rotate(-19deg); /* IE 9 */
+    -webkit-transform: rotate(-19deg); /* Chrome, Safari, Opera */
+    transform: rotate(-19deg);
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	position:relative;
+	top:-520px;
+	left:-11%;
+	z-index:1;
+	width:100%;
+	height:407px;
+	padding-right:20%;
+}
+.slideFive:hover {
+	background:transparent url(images/unstoppableover1.png) no-repeat;
+	max-height:407px;
+	height:407px;
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	padding-right:20%;
+	cursor:pointer;
+}
+}
+@media only screen and (max-width: 640px) {
+.slideOne {
+	padding-top: 10%;  /* slope */
+	height:400px;
+	z-index:1;
+	padding-bottom:0;
+}
+.slideTwo {
+	background:transparent url(images/ruggedover1.png) no-repeat;
+	max-height:307px;
+	-ms-transform: rotate(-19deg); /* IE 9 */
+    -webkit-transform: rotate(-19deg); /* Chrome, Safari, Opera */
+    transform: rotate(-19deg);
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	position:relative;
+	top:20px;
+	left:-11%;
+	z-index:1;
+	width:100%;
+	height:307px;
+	padding-right:20%;
+	margin-top:-150px;
+
+} 
+.slideTwo:hover {
+	background:transparent url(images/ruggedover1.png) no-repeat;
+	max-height:307px;
+	height:307px;
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	padding-right:20%;
+	cursor:pointer;
+}
+.slideThree {
+	background:transparent url(images/waterproofover1.png) no-repeat;
+	max-height:307px;
+	-ms-transform: rotate(-19deg); /* IE 9 */
+    -webkit-transform: rotate(-19deg); /* Chrome, Safari, Opera */
+    transform: rotate(-19deg);
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	position:relative;
+	top:-70px;
+	left:-11%;
+	z-index:2;
+	width:100%;
+	height:307px;
+	padding-right:20%;
+	padding-top:0 !important;
+}
+.slideThree:hover {
+	background:transparent url(images/waterproofover1.png) no-repeat;
+	max-height:307px;
+	height:307px;
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	padding-right:20%;
+	cursor:pointer;
+}
+.slideFour {
+	background:transparent url(images/solidover2.png) no-repeat;
+	max-height:307px;
+	-ms-transform: rotate(-19deg); /* IE 9 */
+    -webkit-transform: rotate(-19deg); /* Chrome, Safari, Opera */
+    transform: rotate(-19deg);
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	position:relative;
+	top:-150px;
+	left:-11%;
+	z-index:1;
+	width:100%;
+	height:307px;
+	padding-right:20%;
+}
+.slideFour:hover {
+	background:transparent url(images/solidover2.png) no-repeat;
+	max-height:307px;
+	height:307px;
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	padding-right:20%;
+	cursor:pointer;
+}
+.slideFive {
+	background:transparent url(images/unstoppableover1.png) no-repeat;
+	max-height:307px;
+	-ms-transform: rotate(-19deg); /* IE 9 */
+    -webkit-transform: rotate(-19deg); /* Chrome, Safari, Opera */
+    transform: rotate(-19deg);
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	position:relative;
+	top:-230px;
+	left:-11%;
+	z-index:1;
+	width:100%;
+	height:307px;
+	padding-right:20%;
+}
+.slideFive:hover {
+	background:transparent url(images/unstoppableover1.png) no-repeat;
+	max-height:307px;
+	height:307px;
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	padding-right:20%;
+	cursor:pointer;
+}
+}
+@media only screen and (max-width: 600px) {
+.wrap {
+	margin: 0 auto;
+	text-align:center;
+	width:100%;
+	margin-bottom:-500px;
+	max-height:1300px;
+	overflow:hidden;
+}
+.title {
+	font-family: "DIN1451StdEngschriftCondensed";
+	font-weight: 400;
+	line-height: 1.1;
+	font-size:100px;
+	color:#f58b02;
+	padding:0;
+}
+
+h2 {
+	font-family: "DINNextLTProRegular";
+	font-weight:normal;
+	font-size: 20px;
+	color:#6b6969;
+	padding-top:5px;
+	padding-bottom:5px;
+	margin:0 auto;
+	text-align:center;
+}
+.slideOne {
+	padding-top: 10%;  /* slope */
+	height:400px;
+	z-index:1;
+	padding-bottom:0;
+}
+.slideTwo {
+	background:transparent url(images/ruggedover1.png) no-repeat;
+	max-height:207px;
+	-ms-transform: rotate(-19deg); /* IE 9 */
+    -webkit-transform: rotate(-19deg); /* Chrome, Safari, Opera */
+    transform: rotate(-19deg);
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	position:relative;
+	top:50px;
+	left:-11%;
+	z-index:1;
+	width:100%;
+	height:207px;
+	padding-right:20%;
+	margin-top:-150px;
+
+} 
+.slideTwo:hover {
+	background:transparent url(images/ruggedover1.png) no-repeat;
+	max-height:207px;
+	height:207px;
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	padding-right:20%;
+	cursor:pointer;
+}
+.slideThree {
+	background:transparent url(images/waterproofover1.png) no-repeat;
+	max-height:207px;
+	-ms-transform: rotate(-19deg); /* IE 9 */
+    -webkit-transform: rotate(-19deg); /* Chrome, Safari, Opera */
+    transform: rotate(-19deg);
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	position:relative;
+	top:20px;
+	left:-11%;
+	z-index:2;
+	width:100%;
+	height:207px;
+	padding-right:20%;
+	padding-top:0 !important;
+}
+.slideThree:hover {
+	background:transparent url(images/waterproofover1.png) no-repeat;
+	max-height:207px;
+	height:207px;
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	padding-right:20%;
+	cursor:pointer;
+}
+.slideFour {
+	background:transparent url(images/solidover2.png) no-repeat;
+	max-height:207px;
+	-ms-transform: rotate(-19deg); /* IE 9 */
+    -webkit-transform: rotate(-19deg); /* Chrome, Safari, Opera */
+    transform: rotate(-19deg);
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	position:relative;
+	top:-10px;
+	left:-11%;
+	z-index:1;
+	width:100%;
+	height:207px;
+	padding-right:20%;
+}
+.slideFour:hover {
+	background:transparent url(images/solidover2.png) no-repeat;
+	max-height:207px;
+	height:207px;
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	padding-right:20%;
+	cursor:pointer;
+}
+.slideFive {
+	background:transparent url(images/unstoppableover1.png) no-repeat;
+	max-height:207px;
+	-ms-transform: rotate(-19deg); /* IE 9 */
+    -webkit-transform: rotate(-19deg); /* Chrome, Safari, Opera */
+    transform: rotate(-19deg);
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	position:relative;
+	top:-40px;
+	left:-11%;
+	z-index:1;
+	width:100%;
+	height:207px;
+	padding-right:20%;
+}
+.slideFive:hover {
+	background:transparent url(images/unstoppableover1.png) no-repeat;
+	max-height:207px;
+	height:207px;
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	padding-right:20%;
+	cursor:pointer;
+}
+}
+@media only screen and (max-width: 480px) {
+
+
+/* For Retina Display */
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+
+
+}
+.wrap {
+	margin: 0 auto;
+	text-align:center;
+	width:100%;
+	margin-bottom:-500px;
+	max-height:1050px;
+}
+
+.title {
+	font-family: "DIN1451StdEngschriftCondensed";
+	font-weight: 400;
+	line-height: 1.1;
+	font-size:100px;
+	color:#f58b02;
+	padding:0;
+}
+
+h2 {
+	font-family: "DINNextLTProRegular";
+	font-weight:normal;
+	font-size: 20px;
+	color:#6b6969;
+	padding-top:5px;
+	padding-bottom:5px;
+	margin:0 auto;
+	text-align:center;
+}
+.slideOne {
+	padding-top: 10%;  /* slope */
+	height:400px;
+	z-index:1;
+	padding-bottom:0;
+}
+.slideTwo {
+	background:transparent url(images/ruggedover1.png) no-repeat;
+	max-height:207px;
+	-ms-transform: rotate(-19deg); /* IE 9 */
+    -webkit-transform: rotate(-19deg); /* Chrome, Safari, Opera */
+    transform: rotate(-19deg);
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	position:relative;
+	top:50px;
+	left:-11%;
+	z-index:1;
+	width:100%;
+	height:207px;
+	padding-right:20%;
+	margin-top:-150px;
+
+} 
+.slideTwo:hover {
+	background:transparent url(images/ruggedover1.png) no-repeat;
+	max-height:207px;
+	height:207px;
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	padding-right:20%;
+	cursor:pointer;
+}
+.slideThree {
+	background:transparent url(images/waterproofover1.png) no-repeat;
+	max-height:207px;
+	-ms-transform: rotate(-19deg); /* IE 9 */
+    -webkit-transform: rotate(-19deg); /* Chrome, Safari, Opera */
+    transform: rotate(-19deg);
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	position:relative;
+	top:20px;
+	left:-11%;
+	z-index:2;
+	width:100%;
+	height:207px;
+	padding-right:20%;
+	padding-top:0 !important;
+}
+.slideThree:hover {
+	background:transparent url(images/waterproofover1.png) no-repeat;
+	max-height:207px;
+	height:207px;
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	padding-right:20%;
+	cursor:pointer;
+}
+.slideFour {
+	background:transparent url(images/solidover2.png) no-repeat;
+	max-height:207px;
+	-ms-transform: rotate(-19deg); /* IE 9 */
+    -webkit-transform: rotate(-19deg); /* Chrome, Safari, Opera */
+    transform: rotate(-19deg);
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	position:relative;
+	top:-10px;
+	left:-11%;
+	z-index:1;
+	width:100%;
+	height:207px;
+	padding-right:20%;
+}
+.slideFour:hover {
+	background:transparent url(images/solidover2.png) no-repeat;
+	max-height:207px;
+	height:207px;
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	padding-right:20%;
+	cursor:pointer;
+}
+.slideFive {
+	background:transparent url(images/unstoppableover1.png) no-repeat;
+	max-height:207px;
+	-ms-transform: rotate(-19deg); /* IE 9 */
+    -webkit-transform: rotate(-19deg); /* Chrome, Safari, Opera */
+    transform: rotate(-19deg);
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	position:relative;
+	top:-40px;
+	left:-11%;
+	z-index:1;
+	width:100%;
+	height:207px;
+	padding-right:20%;
+}
+.slideFive:hover {
+	background:transparent url(images/unstoppableover1.png) no-repeat;
+	max-height:207px;
+	height:207px;
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	padding-right:20%;
+	cursor:pointer;
+}
+}
+@media only screen and (max-width: 360px) {
+
+
+/* For Retina Display */
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+
+
+}
+.wrap {
+	margin: 0 auto;
+	text-align:center;
+	width:100%;
+	min-height:850px !important;
+}
+
+.title {
+	font-family: "DIN1451StdEngschriftCondensed";
+	font-weight: 400;
+	line-height: 1.1;
+	font-size:100px;
+	color:#f58b02;
+	padding-top:10px;
+}
+
+h2 {
+	font-family: "DINNextLTProRegular";
+	font-weight:normal;
+	font-size: 20px;
+	color:#6b6969;
+	padding-top:5px;
+	padding-bottom:5px;
+	margin:0 auto;
+	text-align:center;
+}
+.slideOne {
+	padding-top: 10%;  /* slope */
+	height:400px;
+	z-index:1;
+	padding-bottom:0;
+}
+.slideTwo {
+	background:transparent url(images/ruggedover1.png) no-repeat;
+	max-height:107px;
+	-ms-transform: rotate(-19deg); /* IE 9 */
+    -webkit-transform: rotate(-19deg); /* Chrome, Safari, Opera */
+    transform: rotate(-19deg);
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	position:relative;
+	top:70px;
+	left:-11%;
+	z-index:1;
+	width:100%;
+	height:107px;
+	padding-right:20%;
+	margin-top:-150px;
+
+} 
+.slideTwo:hover {
+	background:transparent url(images/ruggedover1.png) no-repeat;
+	max-height:107px;
+	height:107px;
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	padding-right:20%;
+	cursor:pointer;
+}
+.slideThree {
+	background:transparent url(images/waterproofover1.png) no-repeat;
+	max-height:107px;
+	-ms-transform: rotate(-19deg); /* IE 9 */
+    -webkit-transform: rotate(-19deg); /* Chrome, Safari, Opera */
+    transform: rotate(-19deg);
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	position:relative;
+	top:90px;
+	left:-11%;
+	z-index:2;
+	width:100%;
+	height:107px;
+	padding-right:20%;
+	padding-top:0 !important;
+}
+.slideThree:hover {
+	background:transparent url(images/waterproofover1.png) no-repeat;
+	max-height:107px;
+	height:107px;
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	padding-right:20%;
+	cursor:pointer;
+}
+.slideFour {
+	background:transparent url(images/solidover2.png) no-repeat;
+	max-height:107px;
+	-ms-transform: rotate(-19deg); /* IE 9 */
+    -webkit-transform: rotate(-19deg); /* Chrome, Safari, Opera */
+    transform: rotate(-19deg);
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	position:relative;
+	top:110px;
+	left:-11%;
+	z-index:1;
+	width:100%;
+	height:107px;
+	padding-right:20%;
+}
+.slideFour:hover {
+	background:transparent url(images/solidover2.png) no-repeat;
+	max-height:107px;
+	height:107px;
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	padding-right:20%;
+	cursor:pointer;
+}
+.slideFive {
+	background:transparent url(images/unstoppableover1.png) no-repeat;
+	max-height:107px;
+	-ms-transform: rotate(-19deg); /* IE 9 */
+    -webkit-transform: rotate(-19deg); /* Chrome, Safari, Opera */
+    transform: rotate(-19deg);
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	position:relative;
+	top:130px;
+	left:-11%;
+	z-index:1;
+	width:100%;
+	height:107px;
+	padding-right:20%;
+}
+.slideFive:hover {
+	background:transparent url(images/unstoppableover1.png) no-repeat;
+	max-height:107px;
+	height:107px;
+	background-size:contain;
+	-moz-background-size:contain;
+	background-position:center;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	padding-right:20%;
+	cursor:pointer;
+}
+
+}

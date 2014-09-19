@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'DIN1451StdEngschriftCondensed';
+    src: url('dinengschriftstd.eot');
+    src: url('dinengschriftstd.eot') format('embedded-opentype'),
+         url('dinengschriftstd.woff2') format('woff2'),
+         url('dinengschriftstd.woff') format('woff'),
+         url('dinengschriftstd.ttf') format('truetype'),
+         url('dinengschriftstd.svg#DIN1451StdEngschriftCondensed') format('svg');
+}
+@font-face {
+    font-family: 'DINNextLTProRegular';
+    src: url('dinnextltpro-regular.eot');
+    src: url('dinnextltpro-regular.eot') format('embedded-opentype'),
+         url('dinnextltpro-regular.woff2') format('woff2'),
+         url('dinnextltpro-regular.woff') format('woff'),
+         url('dinnextltpro-regular.ttf') format('truetype'),
+         url('dinnextltpro-regular.svg#DINNextLTProRegular') format('svg');
+}
+

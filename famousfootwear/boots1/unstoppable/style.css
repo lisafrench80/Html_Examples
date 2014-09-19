@@ -1,0 +1,639 @@
+@import 'fonts.css';
+@import 'fonts/dinengschriftstd.css';
+/* ================= 1. CSS Reset ================= */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+input, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	border: 0;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+
+html {
+	font-size: 100%; /* 16px browser default */
+	height:100%;
+	width:100%;
+}
+
+body {
+	background-color: #eee;
+	line-height: 1;
+	margin: 0;
+	padding: 0;
+}
+
+body,
+input,
+select,
+textarea {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+a,
+a:visited,
+button,
+input[type="button"],
+input[type="submit"],
+.btn {
+	-moz-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+
+::-moz-selection {
+	background-color: #1e1e1e;
+	color: #fff;
+}
+
+::selection {
+	background-color: #1e1e1e;
+	color: #fff;
+}
+
+a img {
+	border: none;
+}
+
+/* ================= 2. General Stuff ================= */
+a:hover,
+body,
+h2 a,
+h2 a:visited,
+h4.widgettitle a,
+input,
+#title a,
+#title a:hover {
+	color: #1e1e1e;
+}
+
+a,
+h2 a:hover {
+	color: #ff2a00;
+}
+
+blockquote::before,
+blockquote p,
+input,
+select,
+textarea {
+	color: #999;
+}
+
+button,
+input[type="button"],
+input[type="submit"] {
+	color: #fff;
+}
+body {
+	background:#000 url(images/bground.jpg) no-repeat center center fixed; 
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+}
+/* ================= 3. Fonts and Stuff ================= */
+body,
+input,
+textarea {
+	font-family: "Archer", serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+	font-family: "Archer", serif;
+}
+
+.title {
+	font-family: "DIN1451StdEngschriftCondensed";
+	font-weight: 400;
+	line-height: 1.1;
+	font-size:400px;
+	color:#f58b02;
+	padding:0;
+}
+
+.home h4.title {
+	text-transform: uppercase;
+}
+
+h1 {
+	font-size: 42px;
+	font-size: 2.625rem;
+}
+
+blockquote::before {
+	font-size: 32px;
+	font-size: 2rem;
+}
+
+h2 {
+	font-family: "DINNextLTProRegular";
+	font-weight:normal;
+	font-size: 50px;
+	color:#6b6969;
+	padding-top:5px;
+	padding-bottom:5px;
+	margin:0;
+	margin-left:10%;
+	text-align:left;
+	width:65%;
+}
+
+h3 {
+	font-size: 24px;
+	font-size: 1.5rem;
+}
+
+h4 {
+	font-size: 20px;
+	font-size: 1.25rem;
+}
+
+h5 {
+	font-size: 18px;
+	font-size: 1.125rem;
+}
+
+h6{
+	font-size: 16px;
+	font-size: 1rem;
+}
+
+input,
+select,
+textarea,
+#footer p {
+	font-size: 14px;
+	font-size: 0.875rem;
+}
+blockquote p {
+	font-style: italic;
+}
+
+cite {
+	font-style: normal;
+}
+
+button,
+input[type="button"],
+input[type="submit"],
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+#title {
+	font-weight: 700;
+	-moz-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+
+a,
+a:hover,
+h2 a,
+h2 a:visited,
+#title a {
+	text-decoration: none;
+}
+input[type=text]{
+margin-bottom:20px;
+width:100%;
+padding:10px;
+border-radius:5px;
+border:1px solid #ccc;
+font-style:none;
+font-family:arial, sans-serif;
+margin-top:25px;
+}
+input[type=submit]{
+margin-bottom:20px;
+width:100%;
+padding:15px;
+border-radius:5px;
+border:1px solid #7ac9b7;
+background-color:#a4e6db;
+
+}
+.clear {
+	clear:both;
+}
+hr {background:transparent; border:0; clear:both; color:transparent; height:1px; margin:0; padding:0}
+hr {background: #f58b02; color: #f58b02; margin:0px 0 5px 0;}
+/* ================= 4. General Layout ================= */
+#header {
+	min-height: 46px;
+	overflow: hidden;
+	padding-bottom: 16px;
+	padding-bottom: 1px;
+	overflow: hidden;
+	background: rgb(233,27,27); /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2U5MWIxYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjIyJSIgc3RvcC1jb2xvcj0iI2RiMWExYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjI4JSIgc3RvcC1jb2xvcj0iI2NmMWIxYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjU3JSIgc3RvcC1jb2xvcj0iI2FiMTkxOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNhYjE5MTkiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top,  rgba(233,27,27,1) 0%, rgba(219,26,27,1) 22%, rgba(207,27,28,1) 28%, rgba(171,25,25,1) 57%, rgba(171,25,25,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(233,27,27,1)), color-stop(22%,rgba(219,26,27,1)), color-stop(28%,rgba(207,27,28,1)), color-stop(57%,rgba(171,25,25,1)), color-stop(100%,rgba(171,25,25,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(233,27,27,1) 0%,rgba(219,26,27,1) 22%,rgba(207,27,28,1) 28%,rgba(171,25,25,1) 57%,rgba(171,25,25,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(233,27,27,1) 0%,rgba(219,26,27,1) 22%,rgba(207,27,28,1) 28%,rgba(171,25,25,1) 57%,rgba(171,25,25,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(233,27,27,1) 0%,rgba(219,26,27,1) 22%,rgba(207,27,28,1) 28%,rgba(171,25,25,1) 57%,rgba(171,25,25,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(233,27,27,1) 0%,rgba(219,26,27,1) 22%,rgba(207,27,28,1) 28%,rgba(171,25,25,1) 57%,rgba(171,25,25,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e91b1b', endColorstr='#ab1919',GradientType=0 ); /* IE6-8 */
+	position:fixed;
+	width:100%;
+	z-index:9999;
+}
+.headerWrapper {
+	width:90%;
+	text-align:center;
+	margin:auto;
+}
+.headerLogo {
+	text-align:left;
+}
+.backbtn {
+	color:#fff;
+	padding-left:30px;
+	font-size:150%;
+}
+.backbtn a {
+	color:#fff;
+	text-decoration:none;
+}
+
+.wrap {
+	margin: 0 auto;
+	text-align:center;
+	width: 90%;
+	overflow:hidden;
+	padding:0;
+}
+.logo {
+	float:right;
+	margin-right:5%;
+	text-align:right;
+	background:transparent; 
+	margin-top:3%;
+}
+.logo img {
+	width:100%;
+	max-width:315px;
+}
+.slideOne {
+	max-height:850px;  /* start height */
+	z-index:1;
+	text-align:center; 
+	margin:auto;
+	width:100%;
+}
+.slideTwo {
+	 /* Fallback for web browsers that don't support RGBa */
+    background-color: rgb(0, 0, 0);
+    /* RGBa with 0.6 opacity */
+    background-color: rgba(0, 0, 0, 0.6);
+    /* For IE 5.5 - 7*/
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+    /* For IE 8*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+	border:1px solid #f58b02;
+	width:700px;
+	text-align:center;
+	margin:auto;
+	min-height:250px;
+	z-index:1;
+
+} 
+.slideTwoTitleLeft {
+	display:table-cell;
+	width:450px;
+	text-align:left;
+	padding:15px 0 5px 15px;
+	font-family:"DINNextLTProMedium";
+	color:#f58b02;
+	text-transform:uppercase;
+	font-size:200%;
+	text-shadow: -3px 1px 2px rgba(0, 0, 0, 0.59);
+	vertical-align:top;
+}	
+.slideTwoTitleRight {
+	display:table-cell;
+	width:450px;
+	text-align:left;
+	padding-top:15px;
+	padding-left:15px;
+	padding-right:15px;
+	font-family:"DINNextLTProMedium";
+	color:#f58b02;
+	text-transform:none;
+	font-size:100%;
+	vertical-align:top;
+	border-left:1px solid #fb8b02;
+	text-shadow: -3px 1px 2px rgba(0, 0, 0, 0.59);
+}
+.slideTwoBigContent {
+	width:100%;
+	padding:10px;
+	line-height:150%;
+	text-align:left;
+	font-family:"DINNextLTProRegular";
+	color:#d7d2cb;
+	font-size:105%;
+}
+.slideTwoBigContent ul {
+	list-style: none;
+    padding:0;
+    margin:0;
+	padding-top:10px;
+}
+.slideTwoBigContent li { 
+    padding-left: 1em; 
+    text-indent: -.7em;
+}
+.slideTwoBigContent li:before {
+    content: "• ";
+    color: #fb8b02; /* or whatever color you prefer */
+}
+.responsiveImage {
+	width:100%;
+	max-width:500px;
+}
+/* ================= Mobile/Tablet/Responsive ================= */
+@media only screen and (max-width: 1280px) {
+
+}
+@media only screen and (max-width: 1024px) {
+
+}
+@media only screen and (max-width: 868px) {
+body {
+	background:#000 url(images/bground.jpg) no-repeat center center fixed; 
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+}
+
+.slideTwo {
+	 /* Fallback for web browsers that don't support RGBa */
+    background-color: rgb(0, 0, 0);
+    /* RGBa with 0.6 opacity */
+    background-color: rgba(0, 0, 0, 0.6);
+    /* For IE 5.5 - 7*/
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+    /* For IE 8*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+	border:1px solid #f58b02;
+	width:90%;
+	text-align:center;
+	margin:auto;
+	min-height:250px;
+	z-index:1;
+
+} 
+.slideTwoTitleLeft {
+	display:table-cell;
+	width:50%;
+	text-align:left;
+	padding:15px 0 5px 15px;
+	font-family:"DINNextLTProMedium";
+	color:#f58b02;
+	text-transform:uppercase;
+	font-size:130%;
+	text-shadow: -3px 1px 2px rgba(0, 0, 0, 0.59);
+	vertical-align:top;
+}	
+.slideTwoTitleRight {
+	display:table-cell;
+	width:50%;
+	text-align:left;
+	padding-top:15px;
+	padding-left:15px;
+	padding-right:15px;
+	padding-bottom:15px;
+	font-family:"DINNextLTProMedium";
+	color:#f58b02;
+	text-transform:none;
+	font-size:110%;
+	vertical-align:top;
+	border-left:1px solid #fb8b02;
+	text-shadow: -3px 1px 2px rgba(0, 0, 0, 0.59);
+}
+.slideTwoBigContent {
+	width:90%;
+	padding:10px;
+	line-height:150%;
+	text-align:left;
+	font-family:"DINNextLTProRegular";
+	color:#d7d2cb;
+	font-size:95%;
+
+}
+.slideTwoBigContent ul {
+	list-style: none;
+    padding:0;
+    margin:0;
+	padding-top:10px;
+}
+.slideTwoBigContent li { 
+    padding-left: 1em; 
+    text-indent: -.7em;
+}
+.slideTwoBigContent li:before {
+    content: "• ";
+    color: #fb8b02; /* or whatever color you prefer */
+}
+
+}
+@media only screen and (max-width: 768px) {
+body {
+	background:#000 url(images/bground.jpg) no-repeat center center fixed; 
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+}
+
+.slideTwo {
+	 /* Fallback for web browsers that don't support RGBa */
+    background-color: rgb(0, 0, 0);
+    /* RGBa with 0.6 opacity */
+    background-color: rgba(0, 0, 0, 0.6);
+    /* For IE 5.5 - 7*/
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+    /* For IE 8*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+	border:1px solid #f58b02;
+	width:90%;
+	text-align:center;
+	margin:auto;
+	min-height:250px;
+	z-index:1;
+
+} 
+.slideTwoTitleLeft {
+	display:table-cell;
+	width:50%;
+	text-align:left;
+	padding:15px 0 5px 15px;
+	font-family:"DINNextLTProMedium";
+	color:#f58b02;
+	text-transform:uppercase;
+	font-size:100%;
+	text-shadow: -3px 1px 2px rgba(0, 0, 0, 0.59);
+	vertical-align:top;
+}	
+.slideTwoTitleRight {
+	display:table-cell;
+	width:50%;
+	text-align:left;
+	padding-top:15px;
+	padding-left:15px;
+	padding-right:15px;
+	padding-bottom:15px;
+	font-family:"DINNextLTProMedium";
+	color:#f58b02;
+	text-transform:none;
+	font-size:80%;
+	vertical-align:top;
+	border-left:1px solid #fb8b02;
+	text-shadow: -3px 1px 2px rgba(0, 0, 0, 0.59);
+}
+.slideTwoBigContent {
+	width:90%;
+	padding:10px;
+	line-height:150%;
+	text-align:left;
+	font-family:"DINNextLTProRegular";
+	color:#d7d2cb;
+	font-size:85%;
+
+}
+.slideTwoBigContent ul {
+	list-style: none;
+    padding:0;
+    margin:0;
+	padding-top:10px;
+}
+.slideTwoBigContent li { 
+    padding-left: 1em; 
+    text-indent: -.7em;
+}
+.slideTwoBigContent li:before {
+    content: "• ";
+    color: #fb8b02; /* or whatever color you prefer */
+}
+}
+
+@media only screen and (max-width: 600px) {
+
+}
+@media only screen and (max-width: 480px) {
+
+
+/* For Retina Display */
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+
+
+}
+body {
+	background:#000 url(images/bground.jpg) no-repeat center center fixed; 
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+}
+
+.slideTwo {
+	 /* Fallback for web browsers that don't support RGBa */
+    background-color: rgb(0, 0, 0);
+    /* RGBa with 0.6 opacity */
+    background-color: rgba(0, 0, 0, 0.6);
+    /* For IE 5.5 - 7*/
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+    /* For IE 8*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+	border:1px solid #f58b02;
+	width:90%;
+	text-align:center;
+	margin:auto;
+	min-height:250px;
+	z-index:1;
+
+} 
+.slideTwoTitleLeft {
+	display:table-cell;
+	width:50%;
+	text-align:left;
+	padding:15px 0 5px 15px;
+	font-family:"DINNextLTProMedium";
+	color:#f58b02;
+	text-transform:uppercase;
+	font-size:100%;
+	text-shadow: -3px 1px 2px rgba(0, 0, 0, 0.59);
+	vertical-align:top;
+}	
+.slideTwoTitleRight {
+	display:table-cell;
+	width:50%;
+	text-align:left;
+	padding-top:15px;
+	padding-left:15px;
+	padding-right:15px;
+	padding-bottom:15px;
+	font-family:"DINNextLTProMedium";
+	color:#f58b02;
+	text-transform:none;
+	font-size:80%;
+	vertical-align:top;
+	border-left:1px solid #fb8b02;
+	text-shadow: -3px 1px 2px rgba(0, 0, 0, 0.59);
+}
+.slideTwoBigContent {
+	width:80%;
+	padding:10px;
+	line-height:150%;
+	text-align:left;
+	font-family:"DINNextLTProRegular";
+	color:#d7d2cb;
+	font-size:85%;
+}
+.slideTwoBigContent ul {
+	list-style: none;
+    padding:0;
+    margin:0;
+	padding-top:10px;
+}
+.slideTwoBigContent li { 
+    padding-left: 1em; 
+    text-indent: -.7em;
+}
+.slideTwoBigContent li:before {
+    content: "• ";
+    color: #fb8b02; /* or whatever color you prefer */
+}
+
+
+}
